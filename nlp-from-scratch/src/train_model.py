@@ -3,8 +3,6 @@ import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
 
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 import time
 import random
 from .config import *
@@ -101,6 +99,3 @@ def trainIters(encoder, decoder, input_lang, output_lang, pairs, n_iters, print_
             plot_loss_total = 0
 
     showPlot(plot_losses)
-    
-def test(n_iters):
-    showPlot(range(n_iters))
